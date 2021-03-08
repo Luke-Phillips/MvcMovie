@@ -32,6 +32,8 @@ namespace MvcMovie.Models
         [Required]
         public string Rating { get; set; }
 
+        [Display(Name = "Poster URL")]
+        [RegularExpression(@"^https?://.*\.(com|net|edu|org|jpg|png)$")]
         public string ImageUrl { get; set; }
     }
 }

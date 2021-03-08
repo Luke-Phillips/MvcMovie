@@ -12,6 +12,7 @@ namespace MvcMovie
     {
         public static void Main(string[] args)
         {
+            Console.WriteLine("entry point");
             var host = CreateHostBuilder(args).Build();
 
             using (var scope = host.Services.CreateScope())

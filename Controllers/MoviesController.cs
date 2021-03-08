@@ -86,7 +86,7 @@ namespace MvcMovie.Controllers
         {
             var movieGenreVM = new MovieGenreViewModel
             {
-                Genres = new SelectList(new string[] { "Christian", "Documentary", "Historical", "Inspirational" })             
+                Genres = new SelectList(new string[] { "Christian", "Comedy", "Documentary", "Historical", "Inspirational" })             
             };
 
             return View(movieGenreVM);
@@ -99,18 +99,12 @@ namespace MvcMovie.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(MovieGenreViewModel movieGenreVM)//[Bind("Id,Title,ReleaseDate,Genre,Price,Rating")] Movie movie)
         {
-            Console.WriteLine("Title is " + movieGenreVM.Movies[0].Title);
             if (ModelState.IsValid)
             {
                 _context.Add(movieGenreVM.Movies[0]);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-
-            /*var movieGenreVM = new MovieGenreViewModel
-            {
-                Movies = new List<Movie> { movie }
-            };*/
 
             return View(movieGenreVM);
         }
@@ -136,7 +130,7 @@ namespace MvcMovie.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Title,ReleaseDate,Genre,Price,Rating")] Movie movie)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Title,ReleaseDate,Genre,Price,Rating,ImageUrl")] Movie movie)
         {
             if (id != movie.Id)
             {
