@@ -28,7 +28,7 @@ namespace MvcMovie.Models
                     {
                         Title = "The Chosen",
                         ReleaseDate = DateTime.Parse("2017-12-24"),
-                        Genre = "Historical Drama",
+                        Genre = "Historical",
                         Price = 1.00M,
                         Rating = "TV-PG",
                         ImageUrl = "https://i2.wp.com/www.kevinhalloran.net/wp-content/uploads/2020/05/maxresdefault.jpg"
@@ -38,7 +38,7 @@ namespace MvcMovie.Models
                     {
                         Title = "Ephraim's Rescue",
                         ReleaseDate = DateTime.Parse("2013-5-31"),
-                        Genre = "Historical Drama",
+                        Genre = "Historical",
                         Price = 15.99M,
                         Rating = "PG",
                         ImageUrl = "https://resizing.flixster.com/EVwsQg_QPQXWjb0_NXSQz1OZOLQ=/300x300/v2/https://flxt.tmsimg.com/assets/p9975618_v_h9_aa.jpg"
@@ -58,7 +58,7 @@ namespace MvcMovie.Models
                     {
                         Title = "The Cokeville Miracle",
                         ReleaseDate = DateTime.Parse("2015-6-5"),
-                        Genre = "Historical Drama",
+                        Genre = "Historical",
                         Price = 8.87M,
                         Rating = "PG-13",
                         ImageUrl = "https://upload.wikimedia.org/wikipedia/en/thumb/f/ff/Thecokevillemiracleposter.jpg/220px-Thecokevillemiracleposter.jpg"
